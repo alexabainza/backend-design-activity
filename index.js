@@ -13,12 +13,13 @@ const port = process.env.PORT;
 // IMPORT SELF DEFINED MODULES
 const { handleError } = require("./middleware/error.js");
 const logger = require("./middleware/logging.js");
+app.use(logger);
+
 const authRoutes = require("./routes/auth.route.js");
 const userRoutes = require("./routes/user.route.js");
 app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
 
-app.use(logger);
 app.use(handleError);
 
 // TEST ROUTE

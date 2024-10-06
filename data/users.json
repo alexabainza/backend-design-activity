@@ -43,32 +43,11 @@
   },
   {
     "id": 8,
-    "username": "shoomiming",
-    "email": "shoomi@gmail.com",
-    "password": "$2a$10$H.ZYOwnm2o.VwBTUCi/H9u08y0F5c6R7xPKAcHs3eqgDi0J4.NDlC"
-  },
-  {
-    "id": 9,
-    "username": "shoomiminggg",
-    "email": "shoomi@gmail.com",
-    "password": "$2a$10$YUB/uZja/HYxFM4ikP/t4uaXeoJ3hoOFW1r45RMuettawRTWH36mG"
-  },
-  {
-    "id": 10,
-    "username": "ohvivi",
-    "email": "ohvivi@gmail.com",
-    "password": "$2a$10$z8tkzUPh1oZkSZP0DqqXieprBpyBTcsIzmrfdnz/ydp1sXBr5E.7i"
-  },
-  {
-    "id": 11,
-    "username": "ohvivian",
-    "email": "osh@gmail.com",
-    "password": "$2a$10$WIYNEbEsnj320yFvQvwAK.JtA.DpNl4bxdUgWoiP4RJwRL/hp.fxm"
-  },
-  {
-    "id": 12,
-    "username": "ohviviann",
-    "email": "osh@gmail.com",
-    "password": "$2a$10$oYg2pprUNgB/TQ1p4LTsx.llx8uCK6XaI2Kh8e5TV.YKKlw4G1vky"
+    "username": "layzhh",
+    "email": "lay@gmail.com",
+    "password": "$2a$10$V3vyb4FqukJAbCsczaTd6eEidEIxHUdAkl2QF7fzzZP9dotQ2yWUC",
+    "createdAt": "2024-10-06T09:37:58.312Z",
+    "updatedAt": "2024-10-06T09:37:58.312Z",
+    "deletedAt": null
   }
 ]

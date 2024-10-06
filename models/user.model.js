@@ -48,6 +48,9 @@ const addUser = async (username, email, password) => {
     username,
     email,
     password: hashedPassword,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+    deletedAt: null,
   };
 
   const { error } = registerSchema.validate({
