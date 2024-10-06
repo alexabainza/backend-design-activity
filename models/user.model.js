@@ -28,6 +28,7 @@ const saveUsers = (users) => {
 };
 
 const users = getUsers();
+
 //FOR LOGIN
 const findByUsername = (username) => {
   return users.find((user) => user.username === username);
@@ -54,13 +55,13 @@ const addUser = async (username, email, password) => {
     email,
     password: hashedPassword,
   });
+
   if (error) {
     throw new Error(`Validation error: ${error.details[0].message}`);
   }
 
   users.push(newUser);
   saveUsers(users);
-
   return newUser;
 };
 

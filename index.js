@@ -1,25 +1,32 @@
 const express = require("express");
 const app = express();
-const port = 3000;
+require("dotenv").config();
+
+// IMPORT LIBRARIES
+const bodyParser = require("body-parser");
+const cookieParser = require("cookie-parser");
+app.use(bodyParser.json());
+app.use(cookieParser());
+
+const port = process.env.PORT;
+
+// IMPORT SELF DEFINED MODULES
+const { handleError } = require("./middleware/error.js");
+const logger = require("./middleware/logging.js");
 const authRoutes = require("./routes/auth.route.js");
 const userRoutes = require("./routes/user.route.js");
-
-const bodyParser = require("body-parser");
-const cookieParser = require("cookie-parser"); // Import cookie-parser
-const { handleError } = require("./middleware/error.js"); // Import your error handling middleware
-const logger = require("./middleware/logging.js");
-require("dotenv").config();
-app.use(cookieParser());
-app.use(bodyParser.json());
-app.use(logger);
-
 app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
 
+app.use(logger);
+app.use(handleError);
+
+// TEST ROUTE
 app.get("/", (req, res) => {
   res.send("hello world");
 });
-app.use(handleError);
+
+//CATCH INVALID ROUTES
 app.all("*", (req, res) => {
   res.send("Invalid route");
 });
