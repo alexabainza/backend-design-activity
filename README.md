@@ -32,7 +32,7 @@ git clone https://github.com/alexabainza/backend-design-activity
 
 2. **Navigate to the root folder**
 ```
-cd appdev-backend-design
+cd backend-design-activity
 ```
 
 3. **Install dependencies**
