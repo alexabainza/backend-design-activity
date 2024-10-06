@@ -49,14 +49,5 @@
     "createdAt": "2024-10-06T09:37:58.312Z",
     "updatedAt": "2024-10-06T09:37:58.312Z",
     "deletedAt": null
-  },
-  {
-    "id": 9,
-    "username": "kimkai",
-    "email": "kkai@gmail.com",
-    "password": "$2a$10$cZPuunspJwgexYk2NvGD7uZvhy8JpufWoX692pL3u78k7LC17R4re",
-    "createdAt": "2024-10-06T09:51:21.213Z",
-    "updatedAt": "2024-10-06T09:51:21.213Z",
-    "deletedAt": null
   }
 ]

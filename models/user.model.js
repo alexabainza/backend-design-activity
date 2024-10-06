@@ -40,7 +40,15 @@ const addUser = async (username, email, password) => {
   if (existingUser) {
     return Promise.reject(new Error("Username already exists"));
   }
+  const { error } = registerSchema.validate({
+    username,
+    email,
+    password,
+  });
 
+  if (error) {
+    throw new Error(`Validation error: ${error.details[0].message}`);
+  }
   const hashedPassword = await bcrypt.hash(password, 10);
 
   const newUser = {
@@ -52,16 +60,6 @@ const addUser = async (username, email, password) => {
     updatedAt: new Date().toISOString(),
     deletedAt: null,
   };
-
-  const { error } = registerSchema.validate({
-    username,
-    email,
-    password: hashedPassword,
-  });
-
-  if (error) {
-    throw new Error(`Validation error: ${error.details[0].message}`);
-  }
 
   users.push(newUser);
   saveUsers(users);
