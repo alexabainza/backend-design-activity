@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "username": "alex",
+    "password": "password123",
+    "email": "alex@gmail.com"
+  },
+  {
+    "id": 2,
+    "username": "chen",
+    "password": "supersecurepwd",
+    "email": "chen@gmail.com"
+  },
+  {
+    "id": 3,
+    "username": "pcy",
+    "password": "mysecretpassword",
+    "email": "pcy@gmail.com"
+  },
+  {
+    "id": 4,
+    "username": "alexxx",
+    "email": "alex@example.com",
+    "password": "$2a$10$a0lM/Pu0SVXTOA36xFpCa.P0aA1P84/QGUZz7xgi2oW1dLYdBRLA2"
+  },
+  {
+    "id": 5,
+    "username": "alehx",
+    "email": "alex@example.com",
+    "password": "$2a$10$wt4r1oHTFDIJXieqNq4igOVO8o10NOMTeQa5GaOkfn/tQFNkGZUue"
+  },
+  {
+    "id": 6,
+    "username": "alexxxxxx",
+    "email": "alex@gmail.com",
+    "password": "$2a$10$3K2wityCPX26qdwUf06xGOubn/.cr83WS9nNkwTBlwfFz4a2QGmmO"
+  },
+  {
+    "id": 7,
+    "username": "real__pcy",
+    "email": "pcy@gmail.com",
+    "password": "$2a$10$7eihzXY/yuLbyGUSC6HTWeO4JJBefoouqMCG5WeItWHLvS5DYkY2q"
+  }
+]
