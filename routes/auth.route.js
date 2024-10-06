@@ -1,11 +1,10 @@
 const express = require("express");
 const router = express.Router({ mergeParams: true });
-const authenticateToken = require("../middleware/verifyUser.js");
-const userController = require("../controllers/user.controller.js");
+const authController = require("../controllers/auth.controller.js");
+
 const limiter = require("../middleware/rateLimiter.js");
 
-router.post("/register", limiter, userController.register);
-router.post("/login", limiter, userController.login);
-router.get("/profile", limiter, authenticateToken, userController.getUserData);
+router.post("/register", limiter, authController.register);
+router.post("/login", limiter, authController.login);
 
 module.exports = router;

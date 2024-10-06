@@ -1,7 +1,9 @@
 const express = require("express");
 const app = express();
 const port = 3000;
-const routes = require("./routes/auth.route.js");
+const authRoutes = require("./routes/auth.route.js");
+const userRoutes = require("./routes/user.route.js");
+
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser"); // Import cookie-parser
 const { handleError } = require("./middleware/error.js"); // Import your error handling middleware
@@ -11,7 +13,8 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(logger);
 
-app.use("/", routes);
+app.use("/api/auth", authRoutes);
+app.use("/api/user", userRoutes);
 
 app.get("/", (req, res) => {
   res.send("hello world");

@@ -1,10 +1,23 @@
 const fs = require("fs");
 const path = require("path");
-const Joi = require("joi");
 const bcrypt = require("bcryptjs");
+const Joi = require("joi");
 
 const dataPath = path.join(__dirname, "../data/users.json");
 
+// DEFINE SCHEMAS FOR INPUTS
+const registerSchema = Joi.object({
+  username: Joi.string().min(3).max(30).required(),
+  password: Joi.string().min(6).required(),
+  email: Joi.string().email().required(),
+});
+
+const loginSchema = Joi.object({
+  username: Joi.string().min(3).max(30).required(),
+  password: Joi.string().min(6).required(),
+});
+
+// DEFINE FUNCTIONS
 const getUsers = () => {
   const rawData = fs.readFileSync(dataPath);
   return JSON.parse(rawData);
@@ -14,29 +27,13 @@ const saveUsers = (users) => {
   fs.writeFileSync(dataPath, JSON.stringify(users, null, 2));
 };
 
-// Define User Schema using Joi
-const userRegistrationSchema = Joi.object({
-  username: Joi.string().min(3).max(30).required(),
-  password: Joi.string().min(6).required(), // Will be hashed later
-  email: Joi.string().email().required(),
-});
-
-// Define User Schema using Joi for login
-const userLoginSchema = Joi.object({
-  username: Joi.string().min(3).max(30).required(),
-  password: Joi.string().min(6).required(),
-});
-
 const users = getUsers();
-
+//FOR LOGIN
 const findByUsername = (username) => {
   return users.find((user) => user.username === username);
 };
 
-const findByEmail = (email) => {
-  return users.find((user) => user.email === email);
-};
-
+//FOR REGISTER
 const addUser = async (username, email, password) => {
   const existingUser = users.find((user) => user.username === username);
   if (existingUser) {
@@ -52,7 +49,7 @@ const addUser = async (username, email, password) => {
     password: hashedPassword,
   };
 
-  const { error } = userRegistrationSchema.validate({
+  const { error } = registerSchema.validate({
     username,
     email,
     password: hashedPassword,
@@ -72,7 +69,6 @@ module.exports = {
   saveUsers,
   addUser,
   findByUsername,
-  findByEmail,
-  userRegistrationSchema,
-  userLoginSchema,
+  registerSchema,
+  loginSchema,
 };

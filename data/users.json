@@ -40,5 +40,23 @@
     "username": "real__pcy",
     "email": "pcy@gmail.com",
     "password": "$2a$10$7eihzXY/yuLbyGUSC6HTWeO4JJBefoouqMCG5WeItWHLvS5DYkY2q"
+  },
+  {
+    "id": 8,
+    "username": "shoomiming",
+    "email": "shoomi@gmail.com",
+    "password": "$2a$10$H.ZYOwnm2o.VwBTUCi/H9u08y0F5c6R7xPKAcHs3eqgDi0J4.NDlC"
+  },
+  {
+    "id": 9,
+    "username": "shoomiminggg",
+    "email": "shoomi@gmail.com",
+    "password": "$2a$10$YUB/uZja/HYxFM4ikP/t4uaXeoJ3hoOFW1r45RMuettawRTWH36mG"
+  },
+  {
+    "id": 10,
+    "username": "ohvivi",
+    "email": "ohvivi@gmail.com",
+    "password": "$2a$10$z8tkzUPh1oZkSZP0DqqXieprBpyBTcsIzmrfdnz/ydp1sXBr5E.7i"
   }
 ]
